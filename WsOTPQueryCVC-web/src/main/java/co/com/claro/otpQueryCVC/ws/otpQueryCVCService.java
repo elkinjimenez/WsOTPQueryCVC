@@ -5,13 +5,13 @@
  */
 package co.com.claro.otpQueryCVC.ws;
 
-import co.com.claro.otpQueryCVC.entity.ParameterOtp;
+import co.com.claro.otpQueryCVC.entity.CodigoscvcOtp;
+import co.com.claro.otpQueryCVC.facade.CodigoscvcOtpFacade;
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.*;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import co.com.claro.otpQueryCVC.facade.ParameterOtpFacade;
 import co.com.claro.otpQueryCVC.model.GenericResponse;
 import co.com.claro.otpQueryCVC.model.ParameterResponse;
 import javax.ejb.Stateless;
@@ -28,7 +28,7 @@ import java.util.List;
 public class otpQueryCVCService {
 
     @EJB
-    private ParameterOtpFacade parameterOTPFacade;
+    private CodigoscvcOtpFacade codigosCVCFacade;
 
     public otpQueryCVCService() {
     }
@@ -36,13 +36,13 @@ public class otpQueryCVCService {
     @GET
     @Consumes("application/json")
     @Produces("application/json")
-    @Path("queryCVC")
-    public ParameterResponse queryCVC() {
+    @Path("codesCVC")
+    public ParameterResponse codesCVC() {
         ParameterResponse response = new ParameterResponse();
         try {
             GenericResponse responseG = new GenericResponse(true, "Transacción completa.");
-            List<ParameterOtp> listado = parameterOTPFacade.findAll();
-            response.setParameters(listado);
+            List<CodigoscvcOtp> listado = codigosCVCFacade.findAll();
+            response.setCodesCVC(listado);
             response.setResponse(responseG);
         } catch (Exception e) {
             GenericResponse responseG = new GenericResponse(false, "Error inesperado en la consulta: " + e);

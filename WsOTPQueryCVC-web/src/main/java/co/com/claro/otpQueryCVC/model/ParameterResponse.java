@@ -1,6 +1,6 @@
 package co.com.claro.otpQueryCVC.model;
 
-import co.com.claro.otpQueryCVC.entity.ParameterOtp;
+import co.com.claro.otpQueryCVC.entity.CodigoscvcOtp;
 import java.util.List;
 import lombok.*;
 
@@ -11,7 +11,7 @@ public class ParameterResponse {
 
     @Getter
     @Setter
-    private List<ParameterOtp> parameters;
+    private List<CodigoscvcOtp> codesCVC;
 
     @Getter
     @Setter

@@ -5,8 +5,7 @@
  */
 package co.com.claro.otpQueryCVC.facade;
 
-import co.com.claro.otpQueryCVC.entity.ParameterOtp;
-import java.util.List;
+import co.com.claro.otpQueryCVC.entity.CodigoscvcOtp;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author jimenezelkg
  */
 @Stateless
-public class ParameterOtpFacade extends AbstractFacade<ParameterOtp> {
+public class CodigoscvcOtpFacade extends AbstractFacade<CodigoscvcOtp> {
 
     @PersistenceContext(unitName = "UpdateCase")
     private EntityManager em;
@@ -26,13 +25,8 @@ public class ParameterOtpFacade extends AbstractFacade<ParameterOtp> {
         return em;
     }
 
-    public ParameterOtpFacade() {
-        super(ParameterOtp.class);
+    public CodigoscvcOtpFacade() {
+        super(CodigoscvcOtp.class);
     }
-
-    public List<ParameterOtp> listado() {
-        List<ParameterOtp> list = (List<ParameterOtp>) em.createQuery("SELECT p FROM ParameterOtp p").getResultList();
-        return list;
-    }
-
+    
 }
