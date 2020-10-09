@@ -36,8 +36,8 @@ public class otpQueryCVCService {
     @GET
     @Consumes("application/json")
     @Produces("application/json")
-    @Path("queryParametersOTP")
-    public ParameterResponse queryParametersOTP() {
+    @Path("queryCVC")
+    public ParameterResponse queryCVC() {
         ParameterResponse response = new ParameterResponse();
         try {
             GenericResponse responseG = new GenericResponse(true, "Transacción completa.");
