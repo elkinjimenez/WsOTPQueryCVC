@@ -36,14 +36,21 @@ public class otpQueryCVCService {
     @GET
     @Consumes("application/json")
     @Produces("application/json")
-    @Path("codesCVC")
-    public ParameterResponse codesCVC() {
+    @Path("searchCode")
+    public ParameterResponse searchCode(@QueryParam("code") String code) {
         ParameterResponse response = new ParameterResponse();
         try {
-            GenericResponse responseG = new GenericResponse(true, "Transacción completa.");
-            List<CodigoscvcOtp> listado = codigosCVCFacade.findAll();
-            response.setCodesCVC(listado);
-            response.setResponse(responseG);
+            code = code.replaceAll("\"", "");
+            code = code.replaceAll("\'", "");
+            List<CodigoscvcOtp> codigos = codigosCVCFacade.searchCode(code);
+            if (codigos.size() > 0) {
+                GenericResponse responseG = new GenericResponse(true, "Código " + code + " encontrado");
+                response.setCodesCVC(codigos);
+                response.setResponse(responseG);
+            } else {
+                GenericResponse responseG = new GenericResponse(false, "El código " + code + " no fue encontrado.");
+                response.setResponse(responseG);
+            }
         } catch (Exception e) {
             GenericResponse responseG = new GenericResponse(false, "Error inesperado en la consulta: " + e);
             response.setResponse(responseG);

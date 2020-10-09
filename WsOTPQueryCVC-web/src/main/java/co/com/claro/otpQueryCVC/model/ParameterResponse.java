@@ -11,10 +11,10 @@ public class ParameterResponse {
 
     @Getter
     @Setter
-    private List<CodigoscvcOtp> codesCVC;
+    private GenericResponse response;
 
     @Getter
     @Setter
-    private GenericResponse response;
+    private List<CodigoscvcOtp> codesCVC;
 
 }

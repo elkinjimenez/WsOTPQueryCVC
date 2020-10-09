@@ -6,6 +6,7 @@
 package co.com.claro.otpQueryCVC.facade;
 
 import co.com.claro.otpQueryCVC.entity.CodigoscvcOtp;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,5 +29,10 @@ public class CodigoscvcOtpFacade extends AbstractFacade<CodigoscvcOtp> {
     public CodigoscvcOtpFacade() {
         super(CodigoscvcOtp.class);
     }
-    
+
+    public List<CodigoscvcOtp> searchCode(String code) {
+        List<CodigoscvcOtp> cod = (List<CodigoscvcOtp>) em.createQuery("SELECT c FROM CodigoscvcOtp c WHERE c.custcodeAgente='" + code + "'").getResultList();
+        return cod;
+    }
+
 }
