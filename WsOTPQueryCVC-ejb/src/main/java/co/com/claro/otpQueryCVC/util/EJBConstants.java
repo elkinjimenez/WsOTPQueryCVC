@@ -1,4 +1,4 @@
-package co.com.claro.otpParameters.util;
+package co.com.claro.otpQueryCVC.util;
 
 /**
  *

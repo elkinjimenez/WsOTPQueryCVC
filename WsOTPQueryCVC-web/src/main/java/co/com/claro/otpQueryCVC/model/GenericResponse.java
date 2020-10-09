@@ -1,4 +1,4 @@
-package co.com.claro.otpParameters.model;
+package co.com.claro.otpQueryCVC.model;
 
 import lombok.Getter;
 import lombok.Setter;

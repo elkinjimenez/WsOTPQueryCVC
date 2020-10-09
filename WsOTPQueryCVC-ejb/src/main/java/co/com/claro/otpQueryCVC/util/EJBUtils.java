@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.claro.otpParameters.util;
+package co.com.claro.otpQueryCVC.util;
 
 import java.io.IOException;
 import java.lang.reflect.Field;

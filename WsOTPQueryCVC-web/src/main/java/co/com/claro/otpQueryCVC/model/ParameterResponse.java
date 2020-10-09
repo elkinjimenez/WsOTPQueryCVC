@@ -1,6 +1,6 @@
-package co.com.claro.otpParameters.model;
+package co.com.claro.otpQueryCVC.model;
 
-import co.com.claro.otpParameters.entity.ParameterOtp;
+import co.com.claro.otpQueryCVC.entity.ParameterOtp;
 import java.util.List;
 import lombok.*;
 

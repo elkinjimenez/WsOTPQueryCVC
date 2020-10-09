@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.claro.otpParameters.entity;
+package co.com.claro.otpQueryCVC.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -215,7 +215,7 @@ public class TraceabilityOtp implements Serializable {
 
     @Override
     public String toString() {
-        return "co.com.claro.otpParameters.entity.TraceabilityOtp[ idTraza=" + idTraza + " ]";
+        return "co.com.claro.otpQueryCVC.entity.TraceabilityOtp[ idTraza=" + idTraza + " ]";
     }
     
 }

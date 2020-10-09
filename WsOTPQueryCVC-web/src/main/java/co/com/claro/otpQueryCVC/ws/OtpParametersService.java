@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.claro.otpParameters.ws;
+package co.com.claro.otpQueryCVC.ws;
 
-import co.com.claro.otpParameters.entity.ParameterOtp;
+import co.com.claro.otpQueryCVC.entity.ParameterOtp;
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.*;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import co.com.claro.otpParameters.facade.ParameterOtpFacade;
-import co.com.claro.otpParameters.model.GenericResponse;
-import co.com.claro.otpParameters.model.ParameterResponse;
+import co.com.claro.otpQueryCVC.facade.ParameterOtpFacade;
+import co.com.claro.otpQueryCVC.model.GenericResponse;
+import co.com.claro.otpQueryCVC.model.ParameterResponse;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
 import java.util.List;
@@ -22,15 +22,15 @@ import java.util.List;
  *
  * @author omarMad
  */
-@Path("OtpParameters")
+@Path("otpQueryCVC")
 @Stateless
 @TransactionManagement
-public class OtpParametersService {
+public class otpQueryCVCService {
 
     @EJB
     private ParameterOtpFacade parameterOTPFacade;
 
-    public OtpParametersService() {
+    public otpQueryCVCService() {
     }
 
     @GET

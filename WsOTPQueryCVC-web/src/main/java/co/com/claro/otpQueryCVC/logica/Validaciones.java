@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.claro.otpParameters.logica;
+package co.com.claro.otpQueryCVC.logica;
 
 import java.util.ArrayList;
 import java.util.List;

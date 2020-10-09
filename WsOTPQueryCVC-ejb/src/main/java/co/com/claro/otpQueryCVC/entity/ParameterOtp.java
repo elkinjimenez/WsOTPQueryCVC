@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.claro.otpParameters.entity;
+package co.com.claro.otpQueryCVC.entity;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -142,7 +142,7 @@ public class ParameterOtp implements Serializable {
 
     @Override
     public String toString() {
-        return "co.com.claro.otpParameters.entity.ParameterOtp[ idParameter=" + idParameter + " ]";
+        return "co.com.claro.otpQueryCVC.entity.ParameterOtp[ idParameter=" + idParameter + " ]";
     }
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.claro.otpParameters.facade;
+package co.com.claro.otpQueryCVC.facade;
 
 import java.util.List;
 import javax.persistence.EntityManager;

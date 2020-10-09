@@ -4,7 +4,7 @@
     <jta-data-source>jdbc/otp</jta-data-source>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <shared-cache-mode>NONE</shared-cache-mode>
-    <class>co.com.claro.otpParameters.entity.ParameterOtp</class>
+    <class>co.com.claro.otpQueryCVC.entity.ParameterOtp</class>
     <properties>
       <property name="eclipselink.cache.shared.default" value="false"/>
     </properties>
