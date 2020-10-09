@@ -44,7 +44,7 @@ public class otpQueryCVCService {
             code = code.replaceAll("\'", "");
             List<CodigoscvcOtp> codigos = codigosCVCFacade.searchCode(code);
             if (codigos.size() > 0) {
-                GenericResponse responseG = new GenericResponse(true, "Código " + code + " encontrado");
+                GenericResponse responseG = new GenericResponse(true, "Código " + code + " encontrado satisfactoriamente.");
                 response.setCodesCVC(codigos);
                 response.setResponse(responseG);
             } else {
